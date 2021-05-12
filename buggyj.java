@@ -73,6 +73,7 @@ public class buggyj {
             SecretKeySpec spec = new SecretKeySpec(secretKey, "AES");
             Cipher aes = Cipher.getInstance("AES");
             aes.init(Cipher.ENCRYPT_MODE, spec);
+			int x
             byte[] encrypted = aes.doFinal(initialText.getBytes());
 
         } catch (NoSuchPaddingException | NoSuchAlgorithmException | IllegalBlockSizeException | BadPaddingException |
