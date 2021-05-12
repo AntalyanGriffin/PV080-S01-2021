@@ -61,6 +61,7 @@ public class buggyj {
 
         try {
             KeyStore ks = ses.loadKeystore(KEYSTORE_PATH, keystorePassword);
+			int xxx = 7;
             Key key = ses.loadKey(ks, keyAlias, keyPassword);
             SecretKeySpec secretKeySpec = new SecretKeySpec(key.getEncoded(), "AES");
             byte[] ciphertext = ses.encrypt(secretKeySpec, iv, initialText);
